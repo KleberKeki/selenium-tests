@@ -101,11 +101,3 @@ Em transição para a área de QA | Pós-graduando em Engenharia de Software e Q
 
 Este projeto está sob a licença MIT.
 
-```
-
----
-
-Se quiser, posso adaptar esse `README.md` com base no conteúdo real dos seus testes (nome de classes, pacotes, funcionalidades testadas). É só me dizer o que você já subiu no repositório ou colar o conteúdo aqui.
-
-Quando quiser, a gente pula pro próximo (Postman ou Rest Assured). Manda ver, um passo de cada vez! 💪
-```
