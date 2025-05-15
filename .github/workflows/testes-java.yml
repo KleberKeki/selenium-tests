@@ -7,24 +7,20 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout do código
-      uses: actions/checkout@v3
+      - name: Checkout código
+        uses: actions/checkout@v3
 
-    - name: Setup Java
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'
-        distribution: 'temurin'
+      - name: Configurar JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
 
-    - name: Instalar Chrome
-      uses: browser-actions/setup-chrome@v1
+      - name: Rodar testes com Maven
+        run: mvn test
+        working-directory: ./Testes-automatizados # ou o diretório exato onde está o pom.xml
 
-    - name: Verificar versão do Chrome
-      run: google-chrome --version
-
-    - name: Rodar os testes com Maven
-      run: mvn test
